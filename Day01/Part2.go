@@ -25,17 +25,18 @@ func main() {
 			log.Fatal(err)
 		}
 
-		sum += findNecessaryFuel(input)
+		sum += findNecessaryFuel(input, 0)
 	}
 
 	fmt.Println("Sum: " + strconv.Itoa(sum))
 }
 
-func findNecessaryFuel(x int) int {
+func findNecessaryFuel(x int, acc int) int {
+	if x <= 0 {
+		return acc
+	}
+
 	neededFuel := int(math.Max(math.Floor(float64(x/3)) - 2, 0))
 
-	if neededFuel > 0 {
-		neededFuel += findNecessaryFuel(neededFuel)
-	}
-	return neededFuel
+	return findNecessaryFuel(neededFuel, acc + neededFuel)
 }
