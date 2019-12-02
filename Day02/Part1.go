@@ -33,21 +33,5 @@ func main() {
 		commands = append(commands, command)
 	}
 
-	// Process program
-	for i := 0; i + 3 < len(commands); i += 4 {
-		switch commands[i] {
-		case 1:
-			commands[commands[i + 3]] = commands[commands[i + 1]] + commands[commands[i + 2]]
-		case 2:
-			commands[commands[i + 3]] = commands[commands[i + 1]] * commands[commands[i + 2]]
-		case 99:
-			fmt.Println("Finished Program:")
-			fmt.Print(commands[0])
-			for j := 1; j < len(commands); j++ {
-				fmt.Printf(", %d", commands[j])
-			}
-		default:
-			log.Fatalf("%d is an unknown command\n", commands[i])
-		}
-	}
+	fmt.Printf("commands[0] = %d\n", IntOpCodeComputer(commands))
 }
