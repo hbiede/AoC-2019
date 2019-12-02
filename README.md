@@ -10,3 +10,9 @@ Favourite problems:
 Interesting approaches:
 
 * None yet
+
+## From [Ullaakut](https://github.com/Ullaakut/aoc19)
+* Automatically downloads the challenge and input for the day (e.g.: make download DAY=03)
+  * In order to use this target, you need to specify your session cookie from adventofcode.com in AOC_COOKIE.
+  * Parses the challenge into a markdown file (adds Markdown style headers and code blocks).
+  * This part still needs a bit of work, as multiline code blocks are not supported yet, and formatting (bold, italics etc.) is lost.
