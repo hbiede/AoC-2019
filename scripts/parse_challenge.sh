@@ -18,5 +18,8 @@ cat /tmp/challenge03.md | sed 's/ \././g' > /tmp/challenge04.md
 # Add newlines between sentences and headers, and skip the first line.
 cat /tmp/challenge04.md | sed 's/--- Day/~~## Day/g' | sed 's/--- Part/~~## Part/g' | sed 's/ ---/~~/g' | sed -E 's/(\.) ([A-Z])/\1~~\2/g' | tr '~' '\n' | tail -n +3 > challenges/day${1}.md
 
+# Delete HTML
+rm challenges/html/day${1}.html
+
 # Print challenge.
 #cat challenges/day${1}.md

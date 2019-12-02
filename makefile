@@ -36,3 +36,7 @@ challenges/html/day${DAY}.html:
 ## Print this message
 help:
 	@./scripts/help.sh $(abspath $(lastword $(MAKEFILE_LIST)))
+	
+## Set the AOC_COOKIE environment variable (make cookie SESSION=02))
+cookie:
+	@set -Ux AOC_COOKIE ${SESSION}
