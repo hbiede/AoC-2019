@@ -22,16 +22,15 @@ inputs/day${DAY}.txt:
 	@echo "${H}=== Downloading input for day ${SHORT_DAY} ===${X}"
 	@curl -s -b "session=${AOC_COOKIE}" https://adventofcode.com/${YEAR}/day/${SHORT_DAY}/input > inputs/day${DAY}.txt
 
-challenges/day${DAY}.md: challenges/html/day${DAY}.html
+challenges/day${DAY}.md: challenges/day${DAY}.html
 	@echo "${H}=== Parsing input ===${X}"
 	@./scripts/parse_challenge.sh ${DAY}
 
 ## The AOC_COOKIE environment variable should contain a complete session cookie in order to be able to use the make download target
-challenges/html/day${DAY}.html:
+challenges/day${DAY}.html:
 	@[ "${AOC_COOKIE}" ] || ( echo "AOC_COOKIE is not set, please specify your Advent of Code session cookie in order to download challenge and input files"; exit 1 )
 	@echo "${H}=== Downloading challenge for day ${SHORT_DAY} ===${X}"
-	@touch challenges/html/day${DAY}.html
-	@curl -s -b "session=${AOC_COOKIE}" https://adventofcode.com/${YEAR}/day/${SHORT_DAY} > challenges/html/day${DAY}.html
+	@curl -s -b "session=${AOC_COOKIE}" https://adventofcode.com/${YEAR}/day/${SHORT_DAY} > challenges/day${DAY}.html
 
 ## Print this message
 help:

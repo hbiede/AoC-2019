@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # Extract challenge from HTML page.
-cat challenges/html/day${1}.html | pup 'article' > /tmp/challenge00.md
+cat challenges/day${1}.html | pup 'article' > /tmp/challenge00.md
 
 # Replace code HTML elements with markdown-style inline code blocks before getting text.
 cat /tmp/challenge00.md | awk '{ gsub("<code>","`"); gsub("</code>","`"); print }' | pup 'text{}' > /tmp/challenge01.md
@@ -19,7 +19,7 @@ cat /tmp/challenge03.md | sed 's/ \././g' > /tmp/challenge04.md
 cat /tmp/challenge04.md | sed 's/--- Day/~~## Day/g' | sed 's/--- Part/~~## Part/g' | sed 's/ ---/~~/g' | sed -E 's/(\.) ([A-Z])/\1~~\2/g' | tr '~' '\n' | tail -n +3 > challenges/day${1}.md
 
 # Delete HTML
-rm challenges/html/day${1}.html
+rm challenges/day${1}.html
 
 # Print challenge.
 #cat challenges/day${1}.md
