@@ -1,4 +1,4 @@
-##--- Day 2: 1202 Program Alarm ---
+## --- Day 2: 1202 Program Alarm ---
 
 On the way to your gravity assist around the Moon, your ship computer beeps angrily about a "1202 program alarm". On the radio, an Elf is already explaining how to handle the situation: "Don't worry, that's perfectly norma--" The ship computer bursts into flames.
 
@@ -48,7 +48,7 @@ Once you have a working computer, the first step is to restore the gravity assis
 
 Your puzzle answer was `2894520`.
 
-##--- Part Two ---
+## --- Part Two ---
 
 "Good, the new computer seems to be working correctly! Keep it nearby during this mission - you'll probably use it again. Real Intcode computers support many more features than your new one, but we'll let you know what they are as you need them."
 
