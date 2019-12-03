@@ -3,13 +3,17 @@
 
 ## Highlights
 
-Favourite problems:
+Favorite problems:
 
-* None yet
+* Day 3's Wire Problem (Specifically Part 2 where wire distance comes into play) was a fun challenge that really tested by new knowledge of
+the language. 
 
 Interesting approaches:
 
-* None yet
+* For Day 3, I originally attempted to use concurrency to step both wires simultaneously, but I was foiled by Go's built in preventions to 
+inhibit concurrent map access, so I landed on a strategy of tracking wire distance along with the wire that interacted with the coordinate
+before and comparing the combined steps from that. I am sure there are more efficient solutions and I have a few ideas for how I would do
+it in OOP, but this is good enough for now!
 
 Leaderboard appearances:
 
