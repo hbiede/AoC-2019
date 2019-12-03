@@ -56,7 +56,8 @@ Leaderboard appearances:
 
 Note: Times are from time of challenge release, not my start time to completion time
 
-## From [Ullaakut](https://github.com/Ullaakut/aoc19)
+## Scripting From [Ullaakut](https://github.com/Ullaakut/aoc19)
+#### Makefile Automation
 * Automatically downloads the challenge and input for the day (e.g.: make download DAY=03)
   * In order to use this target, you need to specify your session cookie from adventofcode.com in AOC_COOKIE.
   * Parses the challenge into a markdown file (adds Markdown style headers and code blocks).
