@@ -11,7 +11,7 @@ Interesting approaches:
 
 * None yet
 
-Leaderboard Appearances:
+Leaderboard appearances:
 
 * Not likely given that I'm only just learning Go, but you never know...
 
