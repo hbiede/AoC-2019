@@ -19,6 +19,43 @@ Leaderboard appearances:
 
 * Not likely given that I'm only just learning Go, but you never know...
 
+## Stats
+| Day  | Part 1 Completion Time (Rank) | Part 2 Completion Time (Rank) | Note |
+|------|-------------------------------|-------------------------------|------|
+| 1    | 00:37:34 (1279)               | 01:12:42 (1174)               |      |
+| 2    | 00:45:55 (3165)               | 00:59:22 (2722)               |      |
+| 3    | 00:26:33 (1987)               | 00:39:31 (1841)               |      |
+| 4    |                               |                               |      |
+| 5    |                               |                               |      |
+| 6    |                               |                               |      |
+| 7    |                               |                               |      |
+| 8    |                               |                               |      |
+| 9    |                               |                               |      |
+| 10   |                               |                               |      |
+| 11   |                               |                               |      |
+| 12   |                               |                               |      |
+| 13   |                               |                               |      |
+| 14   |                               |                               |      |
+| 15   |                               |                               |      |
+| 16   |                               |                               |      |
+| 17   |                               |                               |      |
+| 18   |                               |                               |      |
+| 19   |                               |                               |      |
+| 20   |                               |                               |      |
+| 21   |                               |                               |      |
+| 22   |                               |                               |      |
+| 23   |                               |                               |      |
+| 24🎅 |                               |                               |      |
+| 25🎄 |                               |                               |      |
+| Avg  | 00:36:40 (2144)               | 00:57:12 (2112)               |      |
+
+![Part 1 Time Stats](https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%201%20Time%20%28minutes%29.png)
+![Part 1 Rank](https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%201%20Rank.png)
+![Part 2 Time Stats](https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%202%20Time%20%28minutes%29.png)
+![Part 2 Rank](https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%202%20Rank.png)
+
+Note: Times are from time of challenge release, not my start time to completion time
+
 ## From [Ullaakut](https://github.com/Ullaakut/aoc19)
 * Automatically downloads the challenge and input for the day (e.g.: make download DAY=03)
   * In order to use this target, you need to specify your session cookie from adventofcode.com in AOC_COOKIE.
