@@ -49,10 +49,8 @@ Leaderboard appearances:
 | 25🎄 |                               |                               |      |
 | Avg  | 00:36:40 (2144)               | 00:57:12 (2112)               |      |
 
-![Part 1 Time Stats](https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%201%20Time%20%28minutes%29.png)
-![Part 1 Rank](https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%201%20Rank.png)
-![Part 2 Time Stats](https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%202%20Time%20%28minutes%29.png)
-![Part 2 Rank](https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%202%20Rank.png)
+| <img alt="Part 1 Time Stats" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%201%20Time%20%28minutes%29.png" width=400> | <img alt="Part 1 Rank" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%201%20Rank.png" width=400> |
+| <img alt="Part 2 Time Stats" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%202%20Time%20%28minutes%29.png" width=400> | <img alt="Part 2 Rank" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%202%20Rank.png" width=400> |
 
 Note: Times are from time of challenge release, not my start time to completion time
 
