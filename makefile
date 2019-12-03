@@ -19,6 +19,7 @@ day${DAY}.go:
 	@sed -e "s/!DAY!/${paddedday}/g" -e "s/MAIN/main/" template/template.go > day${DAY}.go
 
 inputs/day${DAY}.txt:
+	@[ "${AOC_COOKIE}" ] || ( echo "AOC_COOKIE is not set, please specify your Advent of Code session cookie in order to download challenge and input files"; exit 1 )
 	@echo "${H}=== Downloading input for day ${SHORT_DAY} ===${X}"
 	@curl -s -b "session=${AOC_COOKIE}" https://adventofcode.com/${YEAR}/day/${SHORT_DAY}/input > inputs/day${DAY}.txt
 
