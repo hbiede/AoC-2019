@@ -13,7 +13,7 @@ import (
 )
 
 var (
-	partA       = flag.Bool("partA", false, "Perform part A solution?")
+	partA       = flag.Bool("partA", true, "Perform part A solution?")
 	inputFile   = flag.String("inputFile", "inputs/day02.txt", "Input File")
 )
 
@@ -48,6 +48,8 @@ func main() {
 
 	if *partA {
 		// part A
+		commands[1] = 12
+		commands[2] = 2
 		fmt.Printf("commands[0] = %d\n", IntCode.IntOpCodeComputer(commands))
 	} else {
 		// part B
