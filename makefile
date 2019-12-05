@@ -16,7 +16,7 @@ download: challenges/day${DAY}.md inputs/day${DAY}.txt
 
 day${DAY}.go:
 	@echo "${H}=== Copying template for day ${SHORT_DAY} ===${X}"
-	@sed -e "s/!DAY!/${paddedday}/g" -e "s/MAIN/main/" template/template.go > day${DAY}.go
+	@sed -e "s/!DAY!/${DAY}/g" -e "s/MAIN/main/" template/template.go > day${DAY}.go
 
 inputs/day${DAY}.txt:
 	@[ "${AOC_COOKIE}" ] || ( echo "AOC_COOKIE is not set, please specify your Advent of Code session cookie in order to download challenge and input files"; exit 1 )
