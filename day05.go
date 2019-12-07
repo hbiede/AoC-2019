@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"flag"
+	"fmt"
 	"log"
 	"os"
 	"strconv"
@@ -43,10 +44,15 @@ func main() {
 		commands = append(commands, command)
 	}
 
-	if *partA {
-		// part A
-		IntCode.IntOpCodeComputer(commands)
-	} else {
-		// part B
-	}
+	commandsClone := make([]int, len(commands))
+	copy(commandsClone, commands)
+	artificialInput := make ([]int, 1)
+	artificialInput[0] = 1
+	_, partA := IntCode.IntOpCodeComputerNoPrintWithInput(commandsClone, artificialInput)
+	fmt.Printf("Got %d... expected 6731945\n", partA)
+
+	copy(commandsClone, commands)
+	artificialInput[0] = 5
+	_, partB := IntCode.IntOpCodeComputerNoPrintWithInput(commandsClone, artificialInput)
+	fmt.Printf("Got %d... expected 9571668", partB)
 }
