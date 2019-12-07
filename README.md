@@ -28,7 +28,7 @@ Leaderboard appearances:
 | 4    | 24:58:45 (25507)              | 25:32:45 (23574)              | Started late |
 | 5    | 01:59:30 (3248)               | 02:37:27 (2997)               |      |
 | 6    | 20:59:10 (15667)              | 21:12:42 (14373)              |      |
-| 7    |                               |                               |      |
+| 7    | 02:34:51 (3481)               | 03:18:43 (2031)               | Required Multithreading for part 2 (shy of completely redoing the IntComputer) |
 | 8    |                               |                               |      |
 | 9    |                               |                               |      |
 | 10   |                               |                               |      |
@@ -47,7 +47,7 @@ Leaderboard appearances:
 | 23   |                               |                               |      |
 | 24🎅 |                               |                               |      |
 | 25🎄 |                               |                               |      |
-| Avg  | 08:17:55 (8475)               | 00:57:12 (7880)               |      |
+| Avg  | 07:28:54 (7762)               | 07:56:10 (7044)               |      |
 
 | <img alt="Part 1 Time Stats" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%201%20Time%20%28minutes%29.png" width=400> | <img alt="Part 1 Rank" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%201%20Rank.png" width=400> |
 | <img alt="Part 2 Time Stats" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%202%20Time%20%28minutes%29.png" width=400> | <img alt="Part 2 Rank" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%202%20Rank.png" width=400> |
