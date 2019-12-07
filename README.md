@@ -27,7 +27,7 @@ Leaderboard appearances:
 | 3    | 00:26:33 (1987)               | 00:39:31 (1841)               |      |
 | 4    | 24:58:45 (25507)              | 25:32:45 (23574)              | Started late |
 | 5    | 01:59:30 (3248)               | 02:37:27 (2997)               |      |
-| 6    |                               |                               |      |
+| 6    | 20:59:10 (15667)              | 21:12:42 (14373)              |      |
 | 7    |                               |                               |      |
 | 8    |                               |                               |      |
 | 9    |                               |                               |      |
@@ -47,7 +47,7 @@ Leaderboard appearances:
 | 23   |                               |                               |      |
 | 24🎅 |                               |                               |      |
 | 25🎄 |                               |                               |      |
-| Avg  | 00:36:40 (2144)               | 00:57:12 (2112)               |      |
+| Avg  | 08:17:55 (8475)               | 00:57:12 (7880)               |      |
 
 | <img alt="Part 1 Time Stats" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%201%20Time%20%28minutes%29.png" width=400> | <img alt="Part 1 Rank" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%201%20Rank.png" width=400> |
 | <img alt="Part 2 Time Stats" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%202%20Time%20%28minutes%29.png" width=400> | <img alt="Part 2 Rank" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%202%20Rank.png" width=400> |
