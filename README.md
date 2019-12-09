@@ -20,37 +20,38 @@ Leaderboard appearances:
 * Not likely given that I'm only just learning Go, but you never know...
 
 ## Stats
-| Day  | Part 1 Completion Time (Rank) | Part 2 Completion Time (Rank) | Note |
-|-----:|-------------------------------|-------------------------------|------|
-| 1    | 00:37:34 (1279)               | 01:12:42 (1174)               |      |
-| 2    | 00:45:55 (3165)               | 00:59:22 (2722)               |      |
-| 3    | 00:26:33 (1987)               | 00:39:31 (1841)               |      |
-| 4    | 24:58:45 (25507)              | 25:32:45 (23574)              | Started late |
-| 5    | 01:59:30 (3248)               | 02:37:27 (2997)               |      |
-| 6    | 20:59:10 (15667)              | 21:12:42 (14373)              |      |
-| 7    | 02:34:51 (3481)               | 03:18:43 (2031)               | Required Multithreading for part 2 (shy of completely redoing the IntComputer) |
-| 8    |                               |                               |      |
-| 9    |                               |                               |      |
-| 10   |                               |                               |      |
-| 11   |                               |                               |      |
-| 12   |                               |                               |      |
-| 13   |                               |                               |      |
-| 14   |                               |                               |      |
-| 15   |                               |                               |      |
-| 16   |                               |                               |      |
-| 17   |                               |                               |      |
-| 18   |                               |                               |      |
-| 19   |                               |                               |      |
-| 20   |                               |                               |      |
-| 21   |                               |                               |      |
-| 22   |                               |                               |      |
-| 23   |                               |                               |      |
-| 24🎅 |                               |                               |      |
-| 25🎄 |                               |                               |      |
-| Avg  | 07:28:54 (7762)               | 07:56:10 (7044)               |      |
+| Day  | Part 1 Completion Time (Rank) | Part 2 Completion Time (Rank) | Part 2 Completion Time (in Minutes) | Note |
+|-----:|-------------------------------|-------------------------------|-------------------------------|------|
+| 1    | 00:37:34 (1279)               | 01:12:42 (1174)               | 35.13333333                   |      |
+| 2    | 00:45:55 (3165)               | 00:59:22 (2722)               | 13.45                         |      |
+| 3    | 00:26:33 (1987)               | 00:39:31 (1841)               | 12.96666667                   |      |
+| 4    | 24:58:45 (25507)              | 25:32:45 (23574)              | 34                            |      |
+| 5    | 01:59:30 (3248)               | 02:37:27 (2997)               | 37.95                         |      |
+| 6    | 20:59:10 (15667)              | 21:12:42 (14373)              | 13.53333333                   |      |
+| 7    | 02:34:51 (3481)               | 03:18:43 (2031)               | 43.86666667                   | Required Multithreading for part 2 (shy of completely redoing the IntComputer) |
+| 8    | 35:14:42 (15590)              | 35:49:13 (15342)              | 34.51666667                   |      |
+| 9    | 17:46:15 (9648)               | 17:49:01 (9648)               | 2.766666667                   |      |
+| 10   |                               |                               |                               |      |
+| 11   |                               |                               |                               |      |
+| 12   |                               |                               |                               |      |
+| 13   |                               |                               |                               |      |
+| 14   |                               |                               |                               |      |
+| 15   |                               |                               |                               |      |
+| 16   |                               |                               |                               |      |
+| 17   |                               |                               |                               |      |
+| 18   |                               |                               |                               |      |
+| 19   |                               |                               |                               |      |
+| 20   |                               |                               |                               |      |
+| 21   |                               |                               |                               |      |
+| 22   |                               |                               |                               |      |
+| 23   |                               |                               |                               |      |
+| 24🎅 |                               |                               |                               |     |
+| 25🎄 |                               |                               |                               |     |
+| Avg  | 11:42:35 (8841)               | 12:07:56 (8247)               | 0:25:21                       |      |
 
 | <img alt="Part 1 Time Stats" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%201%20Time%20%28minutes%29.png" width=400> | <img alt="Part 1 Rank" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%201%20Rank.png" width=400> |
 | <img alt="Part 2 Time Stats" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%202%20Time%20%28minutes%29.png" width=400> | <img alt="Part 2 Rank" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%202%20Rank.png" width=400> |
+| <img alt="Part 2 Time Stats" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Time%20Difference%20%28Time%20to%20Complete%20Part%202%29.png" width=400> | |
 
 Note: Times are from time of challenge release, not my start time to completion time
 
