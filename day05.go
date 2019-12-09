@@ -13,7 +13,6 @@ import (
 )
 
 var (
-	partA       = flag.Bool("partA", true, "Perform part A solution?")
 	inputFile   = flag.String("inputFile", "inputs/day05.txt", "Input File")
 )
 

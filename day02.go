@@ -45,7 +45,7 @@ func main() {
 		}
 		commands = append(commands, command)
 	}
-
+	//noinspection GoNilness
 	if *partA {
 		// part A
 		commands[1] = 12
