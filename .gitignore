@@ -16,3 +16,5 @@
 
 # MacOs
 .DS_Store
+
+makefile
