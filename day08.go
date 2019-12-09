@@ -4,6 +4,10 @@ import (
 	"bufio"
 	"flag"
 	"fmt"
+	"image"
+	"image/color"
+	"image/draw"
+	"image/png"
 	"log"
 	"math"
 	"os"
@@ -36,7 +40,12 @@ func main() {
 	layers := runesToStringArray(layerComponents, imageHeight, imageWidth)
 
 	_, ones, twos := minLayerBreakDown(layers)
-	fmt.Printf("Ones times twos in layer with fewest 0's (expected 1716): (%d * %d) = %d", ones, twos, ones * twos)
+	fmt.Printf("Ones times twos in layer with fewest 0's (expected 1716): (%d * %d) = %d\n", ones, twos, ones * twos)
+
+	f, _ := os.Create("outputs/day08-2.png")
+	_ = png.Encode(f, createImage(reverse(layers), imageHeight, imageWidth))
+	fmt.Println("Image generated. KFABY expected")
+
 }
 
 func runesToStringArray(runes []rune, height int, width int) []string {
@@ -72,4 +81,37 @@ func minLayerBreakDown(layers []string) (zeros int, ones int, twos int) {
 		}
 	}
 	return zeros, ones, twos
+}
+
+func createImage(layers []string, height int, width int) draw.Image {
+	topLeft := image.Point{X: 0, Y: 0}
+	bottomRight := image.Point{X: width, Y: height}
+	img := image.NewRGBA(image.Rectangle{Min: topLeft, Max: bottomRight})
+	white := color.White
+	black := color.Black
+	for _, layer := range layers {
+		for i, character := range layer {
+			var setColor color.Color
+			switch character {
+			case '0':
+				setColor = black
+			case '1':
+				setColor = white
+			default:
+				setColor = nil
+			}
+			if setColor != nil {
+				img.Set(i % width, i / width, setColor)
+			}
+		}
+	}
+	return img
+}
+
+func reverse(array []string) []string {
+	arrayCopy := make([]string, len(array))
+	for left, right := 0, len(array) - 1; left < right; left, right = left + 1, right - 1 {
+		arrayCopy[left], arrayCopy[right] = array[right], array[left]
+	}
+	return arrayCopy
 }
