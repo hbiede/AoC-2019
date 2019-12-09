@@ -77,7 +77,7 @@ func main() {
 					for m := 5; m <= 9; m++ {
 						if i != j && i != k && i != l && i != m && j != k && j != l && j != m && k != l && k != m && l != m {
 							phases := []int{i, j, k, l, m}
-							amps := [5]*IntCode.IntCodeStream{
+							amps := [5]*IntCode.Stream{
 								IntCode.New(),
 								IntCode.New(),
 								IntCode.New(),
@@ -97,7 +97,7 @@ func main() {
 							wg := sync.WaitGroup{}
 							for ampIndex, ics := range amps {
 								wg.Add(1)
-								go func(ampIndex int, ics *IntCode.IntCodeStream) {
+								go func(ampIndex int, ics *IntCode.Stream) {
 									defer func() {
 										wg.Done()
 										recovery := recover()
@@ -108,7 +108,7 @@ func main() {
 
 									for outputThrust := range ics.Output {
 										if ampIndex == len(amps) - 1 {
-											output = outputThrust
+											output = int(outputThrust)
 										}
 										amps[(ampIndex + 1) % len(amps)].Input <- outputThrust
 									}

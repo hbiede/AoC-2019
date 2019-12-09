@@ -1,6 +1,7 @@
 package main
 
 import (
+	"./IntCode"
 	"bufio"
 	"flag"
 	"fmt"
@@ -8,12 +9,10 @@ import (
 	"os"
 	"strconv"
 	"strings"
-
-	"./IntCode"
 )
 
 var (
-	inputFile   = flag.String("inputFile", "inputs/day05.txt", "Input File")
+	inputFile = flag.String("inputFile", "inputs/day09.txt", "Input File")
 )
 
 func main() {
@@ -32,26 +31,36 @@ func main() {
 	for scanner.Scan() {
 		inputStringFromFile += scanner.Text()
 	}
-
 	commandStrings := strings.Split(inputStringFromFile, ",")
-	var commands []int64
+	var commands []int
 	for _, commandString := range commandStrings { // the _ disregards the index and keeps the element in commandString
 		command, err := strconv.Atoi(commandString)
 		if err != nil {
 			log.Fatal(err)
 		}
-		commands = append(commands, int64(command))
+		commands = append(commands, command)
 	}
 
-	commandsClone := make([]int64, len(commands))
+	// Part A
+	boost := IntCode.New()
+	commandsClone := make([]int, len(commands))
 	copy(commandsClone, commands)
-	artificialInput := make ([]int64, 1)
-	artificialInput[0] = 1
-	_, partA := IntCode.IntOpCodeComputerNoPrintWithInput(commandsClone, artificialInput)
-	fmt.Printf("Got %d... expected 6731945\n", partA)
+	go boost.Run(commandsClone)
 
-	//copy(commandsClone, commands)
-	//artificialInput[0] = 5
-	//_, partB := IntCode.IntOpCodeComputerNoPrintWithInput(commandsClone, artificialInput)
-	//fmt.Printf("Got %d... expected 9571668", partB)
+	boost.Input <- 1
+	fmt.Println("Expected: 2427443564")
+	for output := range boost.Output {
+		fmt.Println(strconv.Itoa(output))
+	}
+
+	// Part B
+	boost = IntCode.New()
+	copy(commandsClone, commands)
+	go boost.Run(commandsClone)
+
+	boost.Input <- 2
+	fmt.Println("Expected: 87221")
+	for output := range boost.Output {
+		fmt.Println(strconv.Itoa(output))
+	}
 }

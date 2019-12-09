@@ -13,7 +13,7 @@ import (
 )
 
 var (
-	partA       = flag.Bool("partA", true, "Perform part A solution?")
+	partA       = flag.Bool("partA", false, "Perform part A solution?")
 	inputFile   = flag.String("inputFile", "inputs/day02.txt", "Input File")
 )
 
@@ -60,7 +60,7 @@ func main() {
 				commandsClone[1] = i
 				commandsClone[2] = j
 				if IntCode.IntOpCodeComputer(commandsClone) == DesiredOutput {
-					fmt.Printf("Noun: %d\tVerb: %d\n100 * noun + verb: %d", i, j, i * 100 + j)
+					fmt.Printf("Noun: %d\tVerb: %d\n100 * noun + verb (expected 9342): %d", i, j, i * 100 + j)
 				}
 			}
 		}
