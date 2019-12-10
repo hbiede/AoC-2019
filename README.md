@@ -31,7 +31,7 @@ Leaderboard appearances:
 | 7    | 02:34:51 (3481)               | 03:18:43 (2031)               | 43.86666667                   | Required Multithreading for part 2 (shy of completely redoing the IntComputer) |
 | 8    | 35:14:42 (15590)              | 35:49:13 (15342)              | 34.51666667                   |      |
 | 9    | 17:46:15 (9648)               | 17:49:01 (9648)               | 2.766666667                   |      |
-| 10   |                               |                               |                               |      |
+| 10   | 11:46:28 (7072)               | 15:58:12 (5927)               | 251.7333                      |      |
 | 11   |                               |                               |                               |      |
 | 12   |                               |                               |                               |      |
 | 13   |                               |                               |                               |      |
@@ -45,9 +45,9 @@ Leaderboard appearances:
 | 21   |                               |                               |                               |      |
 | 22   |                               |                               |                               |      |
 | 23   |                               |                               |                               |      |
-| 24🎅 |                               |                               |                               |     |
-| 25🎄 |                               |                               |                               |     |
-| Avg  | 11:42:35 (8841)               | 12:07:56 (8247)               | 0:25:21                       |      |
+| 24🎅 |                               |                               |                               |      |
+| 25🎄 |                               |                               |                               |      |
+| Avg  | 11:42:58 (8664)               | 12:07:56 (8015)               | 00:48:00                      |      |
 
 | <img alt="Part 1 Time Stats" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%201%20Time%20%28minutes%29.png" width=400> | <img alt="Part 1 Rank" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%201%20Rank.png" width=400> |
 | <img alt="Part 2 Time Stats" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%202%20Time%20%28minutes%29.png" width=400> | <img alt="Part 2 Rank" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%202%20Rank.png" width=400> |
