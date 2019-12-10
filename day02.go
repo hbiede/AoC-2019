@@ -13,12 +13,12 @@ import (
 )
 
 var (
-	partA       = flag.Bool("partA", false, "Perform part A solution?")
-	inputFile   = flag.String("inputFile", "inputs/day02.txt", "Input File")
+	inputFile = flag.String("inputFile", "inputs/day02.txt", "Input File")
 )
 
 const DesiredOutput = 19690720
 
+//noinspection GoNilness
 func main() {
 	flag.Parse()
 
@@ -45,24 +45,25 @@ func main() {
 		}
 		commands = append(commands, command)
 	}
-	//noinspection GoNilness
-	if *partA {
-		// part A
-		commands[1] = 12
-		commands[2] = 2
-		fmt.Printf("commands[0] = %d\n", IntCode.IntOpCodeComputer(commands))
-	} else {
-		// part B
-		for i := 0; i < 100; i++ {
-			for j := 0; j < 100; j++ {
-				commandsClone := make([]int, len(commands))
-				copy(commandsClone, commands)
-				commandsClone[1] = i
-				commandsClone[2] = j
-				if IntCode.IntOpCodeComputer(commandsClone) == DesiredOutput {
-					fmt.Printf("Noun: %d\tVerb: %d\n100 * noun + verb (expected 9342): %d", i, j, i * 100 + j)
-				}
+
+	commandsClone := make([]int, len(commands))
+	copy(commandsClone, commands)
+
+	// part A
+	commandsClone[1] = 12
+	commandsClone[2] = 2
+	fmt.Printf("commands[0] = %d\n", IntCode.IntOpCodeComputer(commandsClone))
+
+	// part B
+	for i := 0; i < 100; i++ {
+		for j := 0; j < 100; j++ {
+			copy(commandsClone, commands)
+			commandsClone[1] = i
+			commandsClone[2] = j
+			if IntCode.IntOpCodeComputer(commandsClone) == DesiredOutput {
+				fmt.Printf("Noun: %d\tVerb: %d\n100 * noun + verb (expected 9342): %d", i, j, i*100+j)
 			}
 		}
 	}
+
 }

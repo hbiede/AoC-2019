@@ -34,24 +34,24 @@ func main() {
 	}
 
 	commandStrings := strings.Split(inputStringFromFile, ",")
-	var commands []int64
+	var commands []int
 	for _, commandString := range commandStrings { // the _ disregards the index and keeps the element in commandString
 		command, err := strconv.Atoi(commandString)
 		if err != nil {
 			log.Fatal(err)
 		}
-		commands = append(commands, int64(command))
+		commands = append(commands, int(command))
 	}
 
-	commandsClone := make([]int64, len(commands))
+	commandsClone := make([]int, len(commands))
 	copy(commandsClone, commands)
-	artificialInput := make ([]int64, 1)
+	artificialInput := make ([]int, 1)
 	artificialInput[0] = 1
 	_, partA := IntCode.IntOpCodeComputerNoPrintWithInput(commandsClone, artificialInput)
 	fmt.Printf("Got %d... expected 6731945\n", partA)
 
-	//copy(commandsClone, commands)
-	//artificialInput[0] = 5
-	//_, partB := IntCode.IntOpCodeComputerNoPrintWithInput(commandsClone, artificialInput)
-	//fmt.Printf("Got %d... expected 9571668", partB)
+	copy(commandsClone, commands)
+	artificialInput[0] = 5
+	_, partB := IntCode.IntOpCodeComputerNoPrintWithInput(commandsClone, artificialInput)
+	fmt.Printf("Got %d... expected 9571668", partB)
 }
