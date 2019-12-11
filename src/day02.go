@@ -16,7 +16,7 @@ var (
 	inputFile = flag.String("inputFile", "inputs/day02.txt", "Input File")
 )
 
-const DesiredOutput = 19690720
+const DesiredOutput = 19690720 // cleverly the day of the moon landing
 
 //noinspection GoNilness
 func main() {
