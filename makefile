@@ -16,7 +16,7 @@ download: challenges/day${DAY}.md inputs/day${DAY}.txt
 
 day${DAY}.go:
 	@echo "${H}=== Copying template for day ${SHORT_DAY} ===${X}"
-	@sed -e "s/!DAY!/${paddedday}/g" -e "s/MAIN/main/" src/template/template.go > src/day${DAY}.go
+	@sed -e "s/!DAY!/${DAY}/g" -e "s/MAIN/main/" src/template/template.go > src/day${DAY}.go
 
 inputs/day${DAY}.txt:
 	@echo "${H}=== Downloading input for day ${SHORT_DAY} ===${X}"
