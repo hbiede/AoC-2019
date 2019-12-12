@@ -17,6 +17,24 @@ var (
 func main() {
 	flag.Parse()
 
+	lowerBound, upperBound := processInput()
+
+	validPasswordsA := 0
+	validPasswordsB := 0
+	for i := lowerBound; i <= upperBound; i++ {
+		partAValid, partBValid := validateNumber(numberToDigits(i))
+		if partAValid {
+			validPasswordsA++
+		}
+		if partBValid {
+			validPasswordsB++
+		}
+	}
+
+	fmt.Printf("Valid passwords for part A (expected 1246): %d\nValid passwords for part B (expected 814): %d", validPasswordsA, validPasswordsB)
+}
+
+func processInput() (int, int) {
 	file, err := os.Open(*inputFile)
 	if err != nil {
 		log.Fatal(err)
@@ -42,43 +60,33 @@ func main() {
 		log.Fatal(err)
 	}
 
-	validPasswordsA := 0
-	validPasswordsB := 0
-	for i := lowerBound; i <= upperBound; i++ {
-		partAValid, partBValid := validateNumber(numberToDigits(i))
-		if partAValid {
-			validPasswordsA++
-		}
-		if partBValid {
-			validPasswordsB++
-		}
-	}
-
-	fmt.Printf("Valid passwords for part A: %d\nValid passwords for part B: %d", validPasswordsA, validPasswordsB)
+	return lowerBound, upperBound
 }
 
 func validateNumber(digits []int) (partA bool, partB bool) {
-	adjacencyLength := 0
+	adjacencyLength := 1
 	lastDigit := -1
 	for _, digit := range digits {
 		if digit < lastDigit {
-			// decrease
+			// decreasing values
 			return false, false
 		} else if digit == lastDigit {
+			// repeating values
 			adjacencyLength++
 			partA = true
 		} else {
-			// increase
-			if adjacencyLength == 1 {
+			// increasing values: ✅
+			if adjacencyLength == 2 {
+				// only say the repeating rule in partB is true if it repeats once
 				partB = true
 			}
-			adjacencyLength = 0
+			adjacencyLength = 1
 		}
 
 		lastDigit = digit
 	}
 
-	return partA, partB || adjacencyLength == 1
+	return partA, partB || adjacencyLength == 2
 }
 
 func numberToDigits(input int) []int {

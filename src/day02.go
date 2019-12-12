@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 
-	"./IntCode"
+	"IntCode"
 )
 
 var (
