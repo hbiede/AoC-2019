@@ -57,8 +57,8 @@ Note: Times are from time of challenge release, not my start time to completion 
 
 ## Scripting From [Ullaakut](https://github.com/Ullaakut/aoc19)
 #### Makefile Automation
-* Automatically downloads the challenge and input for the day (e.g.: `make download DAY=03``)
+* Automatically downloads the challenge and input for the day (e.g.: `make download DAY=03`)
   * In order to use this target, you need to specify your session cookie from adventofcode.com in cookies.txt through the usage of `make cookie SESSION={Insert your session cookie here}`.
   * Parses the challenge into a markdown file (adds Markdown style headers and code blocks).
   * Per Ullaakut, this part still needs a bit of work, as multiline code blocks are not supported yet, and formatting (bold, italics etc.) is lost.
-* Setup the new day's source file from a template file
+* Setup the new day's source file from a template file while downloading the input and challenge per above (e.g.: `make DAY=03`)
