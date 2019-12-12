@@ -29,11 +29,11 @@ Leaderboard appearances:
 | 5    | 01:59:30 (3248)               | 02:37:27 (2997)               | 37.95                         |      |
 | 6    | 20:59:10 (15667)              | 21:12:42 (14373)              | 13.53333333                   |      |
 | 7    | 02:34:51 (3481)               | 03:18:43 (2031)               | 43.86666667                   | Required Multithreading for part 2 (shy of completely redoing the IntComputer) |
-| 8    | 35:14:42 (15590)              | 35:49:13 (15342)              | 34.51666667                   |      |
+| 8    | 35:14:42 (15590)              | 35:49:13 (15342)              | 34.51666667                   | My first time dealing with generating images     |
 | 9    | 17:46:15 (9648)               | 17:49:01 (9648)               | 2.766666667                   |      |
 | 10   | 11:46:28 (7072)               | 15:58:12 (5927)               | 251.7333                      |      |
-| 11   |                               |                               |                               |      |
-| 12   |                               |                               |                               |      |
+| 11   | 23:56:12 (8402)               | 24:22:53 (8209)               | 26.68333333                   |      |
+| 12   | 01:26:42 (2328)               | 02:03:07 (1112)               | 36.41666667                   |      |
 | 13   |                               |                               |                               |      |
 | 14   |                               |                               |                               |      |
 | 15   |                               |                               |                               |      |
@@ -47,7 +47,7 @@ Leaderboard appearances:
 | 23   |                               |                               |                               |      |
 | 24🎅 |                               |                               |                               |      |
 | 25🎄 |                               |                               |                               |      |
-| Avg  | 11:42:58 (8664)               | 12:07:56 (8015)               | 00:48:00                      |      |
+| Avg  | 11:52:43 (8114)               | 12:37:58 (7456)               | 00:45:15                      |      |
 
 | <img alt="Part 1 Time Stats" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%201%20Time%20%28minutes%29.png" width=400> | <img alt="Part 1 Rank" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%201%20Rank.png" width=400> |
 | <img alt="Part 2 Time Stats" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%202%20Time%20%28minutes%29.png" width=400> | <img alt="Part 2 Rank" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%202%20Rank.png" width=400> |
