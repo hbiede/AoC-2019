@@ -45,9 +45,8 @@ func processInput() (int, int) {
 	// Read in inputs
 	scanner := bufio.NewScanner(file)
 	inputStringFromFile := ""
-	for scanner.Scan() {
-		inputStringFromFile += scanner.Text()
-	}
+	scanner.Scan()
+	inputStringFromFile += scanner.Text()
 
 	bounds := strings.Split(inputStringFromFile, "-")
 	lowerBound, err := strconv.Atoi(bounds[0])
