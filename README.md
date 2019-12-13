@@ -1,21 +1,23 @@
 # AoC-2019
 [Advent of Code](adventofcode.com) Solutions for 2019. This is my first year doing Advent of Code, used it as an opportunity to learn Go(lang)
 
-## Highlights
+## Highlights:
 
-Favorite problems:
+####Favorite problems:
 
 * Day 3's Wire Problem (Specifically Part 2 where wire distance comes into play) was a fun challenge that really tested by new knowledge of
 the language. 
+* Day 7's multithreading was my first time doing a real application of simultaneous calculations
+* A working block breaker with a basic AI? That's so cool!!
 
-Interesting approaches:
+####Interesting approaches:
 
 * For Day 3, I originally attempted to use concurrency to step both wires simultaneously, but I was foiled by Go's built in preventions to 
 inhibit concurrent map access, so I landed on a strategy of tracking wire distance along with the wire that interacted with the coordinate
 before and comparing the combined steps from that. I am sure there are more efficient solutions and I have a few ideas for how I would do
 it in OOP, but this is good enough for now!
 
-Leaderboard appearances:
+####Leaderboard appearances:
 
 * Not likely given that I'm only just learning Go, but you never know...
 
@@ -34,7 +36,7 @@ Leaderboard appearances:
 | 10   | 11:46:28 (7072)               | 15:58:12 (5927)               | 251.7333                      |      |
 | 11   | 23:56:12 (8402)               | 24:22:53 (8209)               | 26.68333333                   |      |
 | 12   | 01:26:42 (2328)               | 02:03:07 (1112)               | 36.41666667                   |      |
-| 13   |                               |                               |                               |      |
+| 13   | 11:45:51 (6814)               | 12:31:12 (4959)               | 45.35                         |      |
 | 14   |                               |                               |                               |      |
 | 15   |                               |                               |                               |      |
 | 16   |                               |                               |                               |      |
@@ -47,7 +49,7 @@ Leaderboard appearances:
 | 23   |                               |                               |                               |      |
 | 24🎅 |                               |                               |                               |      |
 | 25🎄 |                               |                               |                               |      |
-| Avg  | 11:52:43 (8114)               | 12:37:58 (7456)               | 00:45:15                      |      |
+| Avg  | 11:52:11 (8014)               | 12:37:27 (7264)               | 00:45:16                      |      |
 
 <img alt="Part 1 Time Stats" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%201%20Time%20%28minutes%29.png" width=400> <img alt="Part 1 Rank" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%201%20Rank.png" width=400>
 <img alt="Part 2 Time Stats" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%202%20Time%20%28minutes%29.png" width=400> <img alt="Part 2 Rank" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%202%20Rank.png" width=400>
