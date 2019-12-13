@@ -16,6 +16,7 @@ func New() *Stream {
 	}
 }
 
+
 var ipJumps = map[int]int{
 	1   : 4,
 	2   : 4,
