@@ -3,21 +3,21 @@
 
 ## Highlights:
 
-####Favorite problems:
+#### Favorite problems:
 
 * Day 3's Wire Problem (Specifically Part 2 where wire distance comes into play) was a fun challenge that really tested by new knowledge of
 the language. 
 * Day 7's multithreading was my first time doing a real application of simultaneous calculations
 * A working block breaker with a basic AI? That's so cool!!
 
-####Interesting approaches:
+#### Interesting approaches:
 
 * For Day 3, I originally attempted to use concurrency to step both wires simultaneously, but I was foiled by Go's built in preventions to 
 inhibit concurrent map access, so I landed on a strategy of tracking wire distance along with the wire that interacted with the coordinate
 before and comparing the combined steps from that. I am sure there are more efficient solutions and I have a few ideas for how I would do
 it in OOP, but this is good enough for now!
 
-####Leaderboard appearances:
+#### Leaderboard appearances:
 
 * Not likely given that I'm only just learning Go, but you never know...
 
