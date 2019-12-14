@@ -37,7 +37,7 @@ it in OOP, but this is good enough for now!
 | 11   | 23:56:12 (8402)               | 24:22:53 (8209)               | 26.68333333                   |      |
 | 12   | 01:26:42 (2328)               | 02:03:07 (1112)               | 36.41666667                   |      |
 | 13   | 11:45:51 (6814)               | 12:31:12 (4959)               | 45.35                         |      |
-| 14   |                               |                               |                               |      |
+| 14   | 16:16:57 (4525)               | 16:37:36 (3903)               | 20.65                         |      |
 | 15   |                               |                               |                               |      |
 | 16   |                               |                               |                               |      |
 | 17   |                               |                               |                               |      |
@@ -49,7 +49,7 @@ it in OOP, but this is good enough for now!
 | 23   |                               |                               |                               |      |
 | 24🎅 |                               |                               |                               |      |
 | 25🎄 |                               |                               |                               |      |
-| Avg  | 11:52:11 (8014)               | 12:37:27 (7264)               | 00:45:16                      |      |
+| Avg  | 12:11:06 (7765)               | 12:54:36 (7024)               | 00:43:30                      |      |
 
 <img alt="Part 1 Time Stats" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%201%20Time%20%28minutes%29.png" width=400> <img alt="Part 1 Rank" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%201%20Rank.png" width=400>
 <img alt="Part 2 Time Stats" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%202%20Time%20%28minutes%29.png" width=400> <img alt="Part 2 Rank" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%202%20Rank.png" width=400>
