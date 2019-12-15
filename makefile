@@ -16,7 +16,7 @@ setup: download day${DAY}.go
 ## Downloads the instructions and inputs for a day (e.g. make DAY=02)
 download: challenges/day${DAY}.md inputs/day${DAY}.txt
 
-day${DAY}.go:
+src/day${DAY}.go:
 	@echo "${H}=== Copying template for day ${SHORT_DAY} ===${X}"
 	@sed -e "s/!DAY!/${DAY}/g" -e "s/MAIN/main/" src/template/template.go > src/day${DAY}.go
 
