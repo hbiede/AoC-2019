@@ -54,3 +54,4 @@ Note: Times are from time of challenge release, not my start time to completion 
   * Per Ullaakut, this part still needs a bit of work, as multiline code blocks are not supported yet, and formatting (bold, italics etc.) is lost.
 * Setup the new day's source file from a template file while downloading the input and challenge per above (e.g.: `make DAY=03`)
 * Create the stats table above by calling `make stats`
+  * May require calling `sh scripts/install_stats_dependencies.sh` to ensure you have all the necessary python dependencies
