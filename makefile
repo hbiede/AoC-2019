@@ -5,6 +5,8 @@ X=$(shell tput sgr0)
 
 # Removes leading zero from given day
 SHORT_DAY := $(shell echo ${DAY} | awk 'sub(/^0*/, "", $$1)')
+COOKIE_FILE := cookies.txt
+SESSION ?= ${shell cat ${COOKIE_FILE}}
 YEAR ?= 2019
 
 default: setup
@@ -20,7 +22,7 @@ day${DAY}.go:
 
 inputs/day${DAY}.txt:
 	@echo "${H}=== Downloading input for day ${SHORT_DAY} ===${X}"
-	@curl -s -b cookies.txt https://adventofcode.com/${YEAR}/day/${SHORT_DAY}/input > inputs/day${DAY}.txt
+	@curl -s -b "session=${SESSION}" https://adventofcode.com/${YEAR}/day/${SHORT_DAY}/input > inputs/day${DAY}.txt
 
 challenges/day${DAY}.md: challenges/html/day${DAY}.html
 	@echo "${H}=== Parsing input ===${X}"
@@ -29,8 +31,17 @@ challenges/day${DAY}.md: challenges/html/day${DAY}.html
 ## The AOC_COOKIE environment variable should contain a complete session cookie in order to be able to use the make download target
 challenges/html/day${DAY}.html:
 	@echo "${H}=== Downloading challenge for day ${SHORT_DAY} ===${X}"
-	@curl -s -b cookies.txt https://adventofcode.com/${YEAR}/day/${SHORT_DAY} > challenges/day${DAY}.html
-	
+	@echo ${SESSION}
+	@curl -s -b "session=${SESSION}" https://adventofcode.com/${YEAR}/day/${SHORT_DAY} > challenges/day${DAY}.html
+
+
+## The AOC_COOKIE environment variable should contain a complete session cookie in order to be able to use the make download target
+stats:
+	@echo "${H}=== Creating Stats Table ===${X}"
+	@$(eval TABLE = $(shell python3 scripts/generate_stats.py ${COOKIE_FILE} ${YEAR}))
+	@sed 's/STATS_TABLE/${TABLE}/g' README_template.md | awk '{gsub(/~~/,"\n")}1' > README.md
+
 ## call `make cookie SESSION=${}`
 cookie:
-	@curl -c cookies.txt 'http://httpbin.org/cookies/set?session=${SESSION}'
+	@echo ${SESSION} > ${COOKIE_FILE}
+	
