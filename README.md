@@ -22,38 +22,27 @@ it in OOP, but this is good enough for now!
 * Not likely given that I'm only just learning Go, but you never know...
 
 ## Stats
-| Day  | Part 1 Completion Time (Rank) | Part 2 Completion Time (Rank) | Part 2 Completion Time (in Minutes) | Note |
-|-----:|-------------------------------|-------------------------------|-------------------------------|------|
-| 1    | 00:37:34 (1279)               | 01:12:42 (1174)               | 35.13333333                   |      |
-| 2    | 00:45:55 (3165)               | 00:59:22 (2722)               | 13.45                         |      |
-| 3    | 00:26:33 (1987)               | 00:39:31 (1841)               | 12.96666667                   |      |
-| 4    | 24:58:45 (25507)              | 25:32:45 (23574)              | 34                            |      |
-| 5    | 01:59:30 (3248)               | 02:37:27 (2997)               | 37.95                         |      |
-| 6    | 20:59:10 (15667)              | 21:12:42 (14373)              | 13.53333333                   |      |
-| 7    | 02:34:51 (3481)               | 03:18:43 (2031)               | 43.86666667                   | Required Multithreading for part 2 (shy of completely redoing the IntComputer) |
-| 8    | 35:14:42 (15590)              | 35:49:13 (15342)              | 34.51666667                   | My first time dealing with generating images     |
-| 9    | 17:46:15 (9648)               | 17:49:01 (9648)               | 2.766666667                   |      |
-| 10   | 11:46:28 (7072)               | 15:58:12 (5927)               | 251.7333                      |      |
-| 11   | 23:56:12 (8402)               | 24:22:53 (8209)               | 26.68333333                   |      |
-| 12   | 01:26:42 (2328)               | 02:03:07 (1112)               | 36.41666667                   |      |
-| 13   | 11:45:51 (6814)               | 12:31:12 (4959)               | 45.35                         |      |
-| 14   | 16:16:57 (4525)               | 16:37:36 (3903)               | 20.65                         |      |
-| 15   |                               |                               |                               |      |
-| 16   |                               |                               |                               |      |
-| 17   |                               |                               |                               |      |
-| 18   |                               |                               |                               |      |
-| 19   |                               |                               |                               |      |
-| 20   |                               |                               |                               |      |
-| 21   |                               |                               |                               |      |
-| 22   |                               |                               |                               |      |
-| 23   |                               |                               |                               |      |
-| 24🎅 |                               |                               |                               |      |
-| 25🎄 |                               |                               |                               |      |
-| Avg  | 12:11:06 (7765)               | 12:54:36 (7024)               | 00:43:30                      |      |
+| Day | Part 1 Time (Rank) (Score) | Part 2 Time (Rank) (Score) |
+|----:|----------------------------|----------------------------|
+|   1 | 00:26:33 ( 1987) (  0)     | 00:39:31 ( 1841) (  0)     |
+|   2 | 00:45:55 ( 3165) (  0)     | 00:59:22 ( 2722) (  0)     |
+|   3 | 00:37:34 ( 1279) (  0)     | 01:12:42 ( 1774) (  0)     |
+|   4 | 22:58:45 (25507) (  0)     | 24:00:00 (23574) (  0)     |
+|   5 | 01:59:30 ( 3248) (  0)     | 02:37:27 ( 2997) (  0)     |
+|   6 | 20:59:10 (15667) (  0)     | 21:12:42 (14373) (  0)     |
+|   7 | 02:34:51 ( 3481) (  0)     | 03:18:43 ( 2031) (  0)     |
+|   8 | 24:00:00 (15590) (  0)     | 24:00:00 (15342) (  0)     |
+|   9 | 17:46:15 ( 9648) (  0)     | 17:49:01 ( 9574) (  0)     |
+|  10 | 11:46:28 ( 7072) (  0)     | 15:58:12 ( 5927) (  0)     |
+|  11 | 23:56:12 ( 8402) (  0)     | 24:00:00 ( 8209) (  0)     |
+|  12 | 01:26:42 ( 2328) (  0)     | 02:03:07 ( 1112) (  0)     |
+|  13 | 11:45:51 ( 6814) (  0)     | 12:31:12 ( 4959) (  0)     |
+|  14 | 16:16:57 ( 4525) (  0)     | 16:37:36 ( 3903) (  0)     |
+| Avg | 11:14:20 ( 7765) (  0)     | 08:29:58 ( 7024) (  0)     |
 
-<img alt="Part 1 Time Stats" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%201%20Time%20%28minutes%29.png" width=400> <img alt="Part 1 Rank" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%201%20Rank.png" width=400>
-<img alt="Part 2 Time Stats" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%202%20Time%20%28minutes%29.png" width=400> <img alt="Part 2 Rank" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Part%202%20Rank.png" width=400>
-<img alt="Part 2 Time Stats" src="https://raw.githubusercontent.com/hbiede/AoC-2019/master/stats/Time%20Difference%20%28Time%20to%20Complete%20Part%202%29.png" width=400>
+
+<img alt="Part 1 Time Stats" src="statsImages/part1time.png" width=400> <img alt="Part 1 Rank" src="statsImages/part1rank.png" width=400>
+<img alt="Part 2 Time Stats" src="statsImages/part2time.png" width=400> <img alt="Part 2 Rank" src="statsImages/part2rank.png" width=400>
 
 Note: Times are from time of challenge release, not my start time to completion time
 
