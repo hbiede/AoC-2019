@@ -46,7 +46,7 @@ it in OOP, but this is good enough for now!
 
 Note: Times are from time of challenge release, not my start time to completion time
 
-## Scripting initially based on a script from [Ullaakut](https://github.com/Ullaakut/aoc19)
+## Scripting initially based on a script from [Ullaakut](https://github.com/Ullaakut/aoc19). Expanded upon by [HBiede](https://github.com/Ullaakut/hbiede)
 #### Makefile Automation
 * Automatically downloads the challenge and input for the day (e.g.: `make download DAY=03`)
   * In order to use this target, you need to specify your session cookie from adventofcode.com in cookies.txt through the usage of `make cookie SESSION={Insert your session cookie here}`.

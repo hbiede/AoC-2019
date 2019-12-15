@@ -16,6 +16,7 @@ setup: download day${DAY}.go
 ## Downloads the instructions and inputs for a day (e.g. make DAY=02)
 download: challenges/day${DAY}.md inputs/day${DAY}.txt
 
+## Adjust here when you have created a template file
 src/day${DAY}.go:
 	@echo "${H}=== Copying template for day ${SHORT_DAY} ===${X}"
 	@sed -e "s/!DAY!/${DAY}/g" -e "s/MAIN/main/" src/template/template.go > src/day${DAY}.go
@@ -29,7 +30,7 @@ challenges/day${DAY}.md: challenges/html/day${DAY}.html
 	@./scripts/parse_challenge.sh ${DAY}
 
 ## The AOC_COOKIE environment variable should contain a complete session cookie in order to be able to use the make download target
-challenges/html/day${DAY}.html:
+challenges/day${DAY}.html:
 	@echo "${H}=== Downloading challenge for day ${SHORT_DAY} ===${X}"
 	@echo ${SESSION}
 	@curl -s -b "session=${SESSION}" https://adventofcode.com/${YEAR}/day/${SHORT_DAY} > challenges/day${DAY}.html
@@ -40,6 +41,13 @@ stats:
 	@echo "${H}=== Creating Stats Table ===${X}"
 	@$(eval TABLE = $(shell python3 scripts/generate_stats.py ${COOKIE_FILE} ${YEAR}))
 	@sed 's/STATS_TABLE/${TABLE}/g' README_template.md | awk '{gsub(/~~/,"\n")}1' > README.md
+
+setup:
+	@echo "${H}=== Creating Necessary Directories ===${X}"
+	@mkdir challenges
+	@mkdir input
+	@mkdir -p src/template
+	@echo "${H}=== Create a template file and adjust the indicated recipe ===${X}"
 
 ## call `make cookie SESSION=${}`
 cookie:
