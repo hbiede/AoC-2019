@@ -19,6 +19,7 @@ USER_AGENT = {"User-Agent": "advent-of-code-stats-gen v{}".format(VERSION)}
 
 
 def get_stats(cookie: dict, years=None) -> Dict[Tuple[Union[int, Any], int], OrderedDict]:
+    # modified verion of equivalent function from https://github.com/wimglenn
     aoc_now = datetime.now()
     if years is None:
         years = range(2015, aoc_now.year + int(aoc_now.month == 12))
