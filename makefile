@@ -9,9 +9,9 @@ COOKIE_FILE := cookies.txt
 SESSION ?= ${shell cat ${COOKIE_FILE}}
 YEAR ?= 2019
 
-default: setup
+default: setupDay
 
-setup: download day${DAY}.go
+setupDay: download src/day${DAY}.go
 
 ## Downloads the instructions and inputs for a day (e.g. make DAY=02)
 download: challenges/day${DAY}.md inputs/day${DAY}.txt
@@ -25,14 +25,13 @@ inputs/day${DAY}.txt:
 	@echo "${H}=== Downloading input for day ${SHORT_DAY} ===${X}"
 	@curl -s -b "session=${SESSION}" https://adventofcode.com/${YEAR}/day/${SHORT_DAY}/input > inputs/day${DAY}.txt
 
-challenges/day${DAY}.md: challenges/html/day${DAY}.html
+challenges/day${DAY}.md: challenges/day${DAY}.html
 	@echo "${H}=== Parsing input ===${X}"
 	@./scripts/parse_challenge.sh ${DAY}
 
 ## The AOC_COOKIE environment variable should contain a complete session cookie in order to be able to use the make download target
 challenges/day${DAY}.html:
 	@echo "${H}=== Downloading challenge for day ${SHORT_DAY} ===${X}"
-	@echo ${SESSION}
 	@curl -s -b "session=${SESSION}" https://adventofcode.com/${YEAR}/day/${SHORT_DAY} > challenges/day${DAY}.html
 
 
