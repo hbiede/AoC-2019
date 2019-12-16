@@ -86,15 +86,24 @@ func fftPhase1(values []int) []int {
 }
 
 func fftPhase2(values []int) []int {
+    // Initial thoughts:
     // to be honest, I'm not 100% certain how this works. I was trying to piece something together when my first
     // solution was taking forever to complete one phase, and this idea worked for the back half of the part 1 examples,
     // so I hoped it would work for enough of this large phase to get the message out, and it did.
     // It doesn't work for part 1 unfortunately (it would be much faster to use this O(n) alg over than O(n^2) one).
     // I'm guessing it only works for this one because we aren't using the front 8 digits and this relies on jumping to
     // the middle via the 'messageLocation' idea?
-    returnVal := make([]int, len(values) - 1)
-    returnVal = append(returnVal, values[len(values) - 1])
-    for i := len(values) - 2; i >= 0; i-- {
+
+    // After further thought:
+    // This works because, in the second half of the array, the only part of the pattern being used is the 0 and the 1.
+    // Since the 0 will eliminate all the values before a given index, the last index will stay constant, and then every
+    // index before that would just be the sum of all values after it. And since only the last digit matters in that
+    // addition, you can just use the index after the index you're looking at (since it already encompasses the sum of
+    // everything after it). This allowed me to add the "/ 2" to the loop condition (since this only works for the back
+    // half of the number, we can assume the messageLocation > midpoint) to increase efficiency
+    returnVal := make([]int, len(values))
+    returnVal[len(values) - 1] = values[len(values) - 1]
+    for i := len(values) - 2; i > len(values) / 2; i-- {
         returnVal[i] = (values[i] + returnVal[i + 1]) % 10
     }
     return returnVal
