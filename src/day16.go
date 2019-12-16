@@ -99,11 +99,17 @@ func fftPhase2(values []int) []int {
     // Since the 0 will eliminate all the values before a given index, the last index will stay constant, and then every
     // index before that would just be the sum of all values after it. And since only the last digit matters in that
     // addition, you can just use the index after the index you're looking at (since it already encompasses the sum of
-    // everything after it). This allowed me to add the "/ 2" to the loop condition (since this only works for the back
-    // half of the number, we can assume the messageLocation > midpoint) to increase efficiency
+    // everything after it). Since we assume the messageLocation > the midpoint, we can safely ignore anything before it
+    messageLocation := 0
+    const messageLength = 7
+    for i := 0; i < messageLength; i++ {
+        messageLocation += values[messageLength - i - 1] * int(math.Pow(10, float64(i)))
+    }
+
     returnVal := make([]int, len(values))
     returnVal[len(values) - 1] = values[len(values) - 1]
-    for i := len(values) - 2; i > len(values) / 2; i-- {
+
+    for i := len(values) - 2; i > messageLocation; i-- {
         returnVal[i] = (values[i] + returnVal[i + 1]) % 10
     }
     return returnVal
