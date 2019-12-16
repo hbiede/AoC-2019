@@ -11,13 +11,13 @@ import (
 )
 
 var (
-    partA       = flag.Bool("partA", false, "Perform part A solution?")
-    inputFile   = flag.String("inputFile", "inputs/day01.txt", "Input File")
+    partA     = flag.Bool("partA", false, "Perform part A solution?")
+    inputFile = flag.String("inputFile", "inputs/day01.txt", "Input File")
 )
 
 func main() {
     flag.Parse()
-    
+
     file, err := os.Open(*inputFile)
     if err != nil {
         log.Fatal(err)
@@ -32,7 +32,7 @@ func main() {
         if err != nil {
             log.Fatal(err)
         }
-        
+
         sum += findNecessaryFuel(input, 0)
     }
 
@@ -49,7 +49,7 @@ func findNecessaryFuel(x int, acc int) int {
             return acc
         }
 
-        neededFuel := int(math.Max(math.Floor(float64(x/3)) - 2, 0))
-        return findNecessaryFuel(neededFuel, acc + neededFuel)
+        neededFuel := int(math.Max(math.Floor(float64(x/3))-2, 0))
+        return findNecessaryFuel(neededFuel, acc+neededFuel)
     }
 }
