@@ -39,7 +39,8 @@ it in OOP, but this is good enough for now!
 |  13 | 11:45:51 ( 6814) (  0)     | 12:31:12 ( 4959) (  0)     |
 |  14 | 16:16:57 ( 4525) (  0)     | 16:37:36 ( 3903) (  0)     |
 |  15 | 03:14:01 ( 1249) (  0)     | 03:56:58 ( 1177) (  0)     |
-| Avg | 10:42:18 ( 7330) (  0)     | 08:11:46 ( 6634) (  0)     |
+|  16 | 17:17:17 ( 6078) (  0)     | 17:42:15 ( 3332) (  0)     |
+| Avg | 11:07:00 ( 7252) (  0)     | 08:47:25 ( 6427) (  0)     |
 
 
 <img alt="Part 1 Time Stats" src="statsImages/part1time.png" width=400> <img alt="Part 1 Rank" src="statsImages/part1rank.png" width=400>
