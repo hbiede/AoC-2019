@@ -152,8 +152,9 @@ func run(commands []int) {
 
         if idle == COMPUTERS && !first255 && NAT.Y != -1 {
             fmt.Printf("Sending %d\n", NAT.Y)
-            if NAT == lastSent {
-                fmt.Printf("Double sent Y: %d (expected XXX)\n\n\n\n", lastSent.Y)
+            if NAT.Y == lastSent.Y {
+                fmt.Printf("Double sent Y: %d (expected XXX)\n", lastSent.Y)
+                return
                 // 14091 is too high
                 // 13278 is too low
             } else {
