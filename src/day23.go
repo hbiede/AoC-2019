@@ -111,10 +111,7 @@ func run(commands []int) {
     }
 
     first255 := true
-    lastSent := Packet{
-        X: 2,
-        Y: -1,
-    }
+    lastYSent := -10
     NAT := Packet{
         X: -1,
         Y: -1,
@@ -122,9 +119,7 @@ func run(commands []int) {
     for {
         idle := 0
         for i := 0; i < COMPUTERS; i++ {
-            sendRealPacket := !packetQueues[i].isEmpty()
             sendPacket := packetQueues[i].Peek() // defaults to {-1, -1} if empty
-
             select {
             case destination := <-computers[i].Output:
             	if destination == 255 {
@@ -134,10 +129,10 @@ func run(commands []int) {
 		            //fmt.Printf("%d messaging %d\n", i, destination)
 	            }
             case computers[i].Input <- sendPacket.X:
-            	if sendRealPacket {
-		            computers[i].Input <- packetQueues[i].Pop().Y
-	            } else {
-	                idle++
+                if packetQueues[i].isEmpty() {
+                    idle++
+                } else {
+                    computers[i].Input <- packetQueues[i].Pop().Y
                 }
             }
         }
@@ -152,13 +147,11 @@ func run(commands []int) {
 
         if idle == COMPUTERS && !first255 && NAT.Y != -1 {
             fmt.Printf("Sending %d\n", NAT.Y)
-            if NAT.Y == lastSent.Y {
-                fmt.Printf("Double sent Y: %d (expected XXX)\n", lastSent.Y)
+            if NAT.Y == lastYSent {
+                fmt.Printf("Double sent Y: %d (expected 13286)\n", lastYSent)
                 return
-                // 14091 is too high
-                // 13278 is too low
             } else {
-                lastSent = NAT
+                lastYSent = NAT.Y
                 packetQueues[0].Push(NAT)
             }
         }
