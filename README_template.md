@@ -1,5 +1,6 @@
 # AoC-2019
-[Advent of Code](adventofcode.com) Solutions for 2019. This is my first year doing Advent of Code, used it as an opportunity to learn Go(lang)
+[Advent of Code](adventofcode.com) Solutions for 2019. This was my first year doing Advent of Code, I used it as an opportunity to learn Go(lang).
+Some days were left incomplete, I hope to come back to complete them at some point when I have more time.
 
 ## Highlights:
 
@@ -9,6 +10,7 @@
 the language. 
 * Day 7's multithreading was my first time doing a real application of simultaneous calculations
 * A working block breaker with a basic AI? That's so cool!!
+* Loved the work put into IntCode by the creators of AoC. It was amazing what it could do.
 
 #### Interesting approaches:
 
@@ -16,10 +18,6 @@ the language.
 inhibit concurrent map access, so I landed on a strategy of tracking wire distance along with the wire that interacted with the coordinate
 before and comparing the combined steps from that. I am sure there are more efficient solutions and I have a few ideas for how I would do
 it in OOP, but this is good enough for now!
-
-#### Leaderboard appearances:
-
-* Not likely given that I'm only just learning Go, but you never know...
 
 ## Stats
 STATS_TABLE
