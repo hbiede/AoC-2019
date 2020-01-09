@@ -122,7 +122,7 @@ func part1(inputMap []string) {
 			next := coord3d{currState.position.x + d.x, currState.position.y + d.y, 0}
 
 			if next == end {
-				fmt.Printf("Steps to ZZ: %d (Expected 476)", currState.distance + 1)
+				fmt.Printf("Steps to ZZ: %d (Expected 476)\n", currState.distance + 1)
 				return
 			}
 
@@ -152,7 +152,7 @@ func part2(inputMap []string) {
 			next := coord3d{st.position.x + d.x, st.position.y + d.y, st.position.z}
 
 			if next == end {
-				fmt.Printf("Steps to recursive exit: %d (Expected 5350)", st.distance + 1)
+				fmt.Printf("Steps to recursive exit: %d (Expected 5350)\n", st.distance + 1)
 				return
 			}
 
