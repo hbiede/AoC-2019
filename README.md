@@ -1,6 +1,5 @@
 # AoC-2019
 [Advent of Code](adventofcode.com) Solutions for 2019. This was my first year doing Advent of Code, I used it as an opportunity to learn Go(lang).
-Some days were left incomplete, I hope to come back to complete them at some point when I have more time.
 
 ## Highlights:
 
@@ -11,6 +10,7 @@ the language.
 * Day 7's multithreading was my first time doing a real application of simultaneous calculations
 * A working block breaker with a basic AI? That's so cool!!
 * Loved the work put into IntCode by the creators of AoC. It was amazing what it could do.
+* A full, working text-based adventure? That's amazing!
 
 #### Interesting approaches:
 
@@ -45,7 +45,9 @@ it in OOP, but this is good enough for now!
 |  21 | 24:00:00 ( 3649) (  0)     | 24:00:00 ( 3351) (  0)     |
 |  22 | 24:00:00 ( 5459) (  0)     | 24:00:00 ( 3120) (  0)     |
 |  23 | 24:00:00 ( 3251) (  0)     | 24:00:00 ( 3180) (  0)     |
-| Avg | 15:02:15 ( 6471) (  0)     | 13:25:09 ( 5627) (  0)     |
+|  24🎅 | 24:00:00 ( 4788) (  0)     | 24:00:00 ( 3624) (  0)     |
+|  25🎄 | 24:00:00 ( 3490) (  0)     | 24:00:00 ( 2471) (  0)     |
+| Avg | 15:45:16 ( 6284) (  0)     | 14:15:57 ( 5421) (  0)     |
 
 
 <img alt="Part 1 Time Stats" src="statsImages/part1time.png" width=400> <img alt="Part 1 Rank" src="statsImages/part1rank.png" width=400>

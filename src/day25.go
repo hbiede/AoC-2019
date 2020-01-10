@@ -59,6 +59,22 @@ func run(commands []int) {
     wg := sync.WaitGroup{}
 
     wg.Add(1)
+    waitingToBegin := true
+    go func() {
+        fmt.Println("Want to (1) play the game or (2) have it auto play?")
+        reader := bufio.NewReader(os.Stdin)
+        text, _ := reader.ReadString('\n')
+        waitingToBegin = false
+        if text == "1\n" {
+            for {
+                text, _ := reader.ReadString('\n')
+                passFunctionToBot(gameController, text)
+            }
+        } else {
+            passFunctionToBot(gameController, "north\nwest\nwest\ntake spool of cat6\neast\neast\nsouth\neast\nnorth\ntake sand\nwest\nnorth\ntake jam\nsouth\nwest\nsouth\nwest\ntake fuel cell\neast\nnorth\nnorth\nwest\ninv\nsouth\n")
+        }
+    }()
+
     go func() {
         defer func() {
             wg.Done()
@@ -68,19 +84,15 @@ func run(commands []int) {
             }
         }()
 
+        for waitingToBegin {
+            // wait for input
+        }
         for output := range gameController.Output {
             fmt.Printf("%c", output)
         }
     }()
-
-    go func() {
-    	for {
-		    reader := bufio.NewReader(os.Stdin)
-		    text, _ := reader.ReadString('\n')
-		    passFunctionToBot(gameController, text)
-	    }
-    }()
     wg.Wait()
+    fmt.Println("Expected password: 8401920")
 }
 
 func passFunctionToBot(botController *IntCode.Stream, function string) {

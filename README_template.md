@@ -1,6 +1,5 @@
 # AoC-2019
 [Advent of Code](adventofcode.com) Solutions for 2019. This was my first year doing Advent of Code, I used it as an opportunity to learn Go(lang).
-Some days were left incomplete, I hope to come back to complete them at some point when I have more time.
 
 ## Highlights:
 
@@ -11,6 +10,7 @@ the language.
 * Day 7's multithreading was my first time doing a real application of simultaneous calculations
 * A working block breaker with a basic AI? That's so cool!!
 * Loved the work put into IntCode by the creators of AoC. It was amazing what it could do.
+* A full, working text-based adventure? That's amazing!
 
 #### Interesting approaches:
 
