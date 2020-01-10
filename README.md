@@ -18,6 +18,8 @@ the language.
 inhibit concurrent map access, so I landed on a strategy of tracking wire distance along with the wire that interacted with the coordinate
 before and comparing the combined steps from that. I am sure there are more efficient solutions and I have a few ideas for how I would do
 it in OOP, but this is good enough for now!
+* In Day 16 - Part 2, I stumbled upon a pattern that works for the second half of large numbers being manipulated in that way. This was a
+truly interesting discovery for me that I did not fully understand until I spent a few hours contemplating it and the math behind it.
 
 ## Stats
 | Day | Part 1 Time (Rank) (Score) | Part 2 Time (Rank) (Score) |
