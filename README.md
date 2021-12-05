@@ -57,6 +57,9 @@ truly interesting discovery for me that I did not fully understand until I spent
 
 Note: Times are from time of challenge release, not my start time to completion time
 
+# Other Years' Solutions
+[List of Advent of Code Repos](https://github.com/hbiede/hbiede/blob/main/aoc.md)
+
 ## Scripting initially based on a script from [Ullaakut](https://github.com/Ullaakut/aoc19). Expanded upon by [HBiede](https://github.com/Ullaakut/hbiede)
 #### Makefile Automation
 * Automatically downloads the challenge and input for the day (e.g.: `make download DAY=03`)
